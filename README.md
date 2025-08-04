@@ -30,7 +30,7 @@ A feature-rich, interactive dashboard for a fictional bespoke clothing company b
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/bespoke-dashboard.git
+   git clone https://github.com/Tobgaybolo/Besopke-dashboard.git
    cd bespoke-dashboard
 
 2. Install Dependencies:
@@ -58,10 +58,10 @@ A feature-rich, interactive dashboard for a fictional bespoke clothing company b
     └── types/                # TypeScript types
 
 ## Available Scripts
-- npm run dev: Start development server
+- `npm run dev`: Start development server
 
-- npm run build: Create production build
+- `npm run build`: Create production build
 
-- npm start: Start production server
+- `npm start`: Start production server
 
-- npm run lint: Run ESLint
+- `npm run lint`: Run ESLint

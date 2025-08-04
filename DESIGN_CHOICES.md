@@ -1,4 +1,4 @@
-```markdown
+
 # Design Choices Documentation
 
 ## State Management

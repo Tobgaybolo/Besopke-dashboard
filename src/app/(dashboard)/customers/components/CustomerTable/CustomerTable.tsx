@@ -99,16 +99,24 @@ export default function CustomerTable() {
         Customers
       </Typography>
       
-      <TextField
-        label="Search Customers"
-        variant="outlined"
-        size="small"
-        value={search}
-        onChange={handleSearchChange}
-        sx={{ mb: 2, width: 300 }}
-      />
-
-      <TableContainer sx={{ maxHeight: 'calc(100vh - 200px)', border: '1px solid #e0e0e0' }}>
+<TextField
+  label="Search Customers"
+  variant="outlined"
+  size="small"
+  value={search}
+  onChange={handleSearchChange}
+  sx={{ mb: 2, width: 300 }}
+  InputLabelProps={{
+    sx: {
+      // Adjust these values to move the label up/down
+      transform: 'translate(11px, -1.5px) scale(1)', // -6px moves it up slightly
+      '&.Mui-focused': {
+        transform: 'translate(10px, -6px) scale(0.6)' // Keep position when focused
+      }
+    }
+  }}
+/>
+      <TableContainer sx={{ maxHeight: 'calc(100vh - 300px)', border: '1px solid #e0e0e0' }}>
         <Table stickyHeader aria-label="customer table" size="small">
           <TableHead>
             <TableRow>
@@ -190,8 +198,13 @@ export default function CustomerTable() {
         sx={{
           borderTop: '1px solid #e0e0e0',
           '& .MuiTablePagination-toolbar': {
-            px: 2
-          }
+            px: 2,
+          },
+          '& .MuiTablePagination-selectIcon': {
+            position: 'relative',
+            right: '5px', // Adjust horizontal position
+            top: '1px',
+          },
         }}
       />
     </Paper>
